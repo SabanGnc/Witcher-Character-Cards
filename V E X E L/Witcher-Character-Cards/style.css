@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a{
+  text-shadow: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.container .card {
+  position: relative;
+  width: 600px;
+  height: 350px;
+  margin: 20px;
+  display: flex;
+  transition: 0.5s;
+  align-items: center;
+  justify-content: flex-start;
+  /* background: linear-gradient(
+    6deg,
+    rgba(86, 171, 47, 1) 0%,
+    rgba(168, 224, 99, 1) 100%
+  ); */
+  background: url(./The\ Witcher\ 3\ Wild\ Hunt\ Landscape\ Mountains639713889.jpg);
+  background-size: cover;
+  background-position: right;
+  background-blend-mode: darken;
+  text-shadow: 3px 3px black;
+}
+
+.container .card img {
+  position: absolute;
+  bottom: 0;
+  left: 46.3%;
+  transform: translateX(-50%);
+  height: 400px;
+  transition: 0.5s;
+}
+
+.container .card:hover img {
+  left: 70%;
+  height: 300px;
+}
+
+.container .card .content {
+  position: relative;
+  width: 50%;
+  left: 20%;
+  opacity: 0;
+  visibility: hidden;
+  padding: 30px 20px 20px 40px;
+  transition: 0.5s;
+}
+
+.container .card:hover .content {
+  left: 0%;
+  opacity: 10;
+  visibility: visible;
+  top: 5%;
+}
+
+.container .card .content h2 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.container .card .content p {
+  color: #fff;
+}
+
+
+
+@media (max-width: 991px) {
+  .container .card {
+    width: auto;
+    max-width: 600px;
+    align-items: flex-start;
+  }
+
+  .container .card:hover {
+    height: 600px;
+  }
+
+  .container .card:hover img {
+    left: 50%;
+    height: 350px;
+  }
+
+  .container .card .content {
+    width: 100%;
+    left: 0;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .container .card {
+    width: 400px;
+  }
+
+  .container .card img {
+    position: absolute;
+    bottom: 0;
+    left: 43.3%;
+    transform: translateX(-49%);
+    height: 300px;
+    transition: 0.5s;
+}
+
+.container .card:hover img {
+    height: 330px;
+  }
+}
+
+@media (max-width: 420px) {
+  .container .card .content {
+    padding: 30px;
+  }
+
+  .container .card:hover img {
+    height: 300px;
+  }
+}
